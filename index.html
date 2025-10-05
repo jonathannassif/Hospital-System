@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City General Hospital</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/icon-192.png" />
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>🏥🏨 <i class="fa-solid fa-hospital"></i> City General Hospital</h1>
+      <nav>
+        <button data-view="home">Home</button>
+        <button data-view="about">About</button>
+        <button data-view="services">Services</button>
+        <button data-view="doctors">Doctors</button>
+        <button data-view="contact">Contact</button>
+      </nav>
+    </header>
+
+    <main id="app">
+      <!-- Dynamic content loads here -->
+    </main>
+
+    <footer>
+      <p>&copy; 2025 City General Hospital. All rights reserved.</p>
+    </footer>
+
+    <!-- App Script (must come after idb, only ONCE) -->
+    <script type="module" src="./app.js"></script>
+
+    <!-- Service Worker -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("sw.js")
+          .then(() => console.log("SW registered"))
+          .catch(console.error);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+- [x] Update index.html: Change title to "City General Hospital", header h1, nav buttons to Home, About, Services, Doctors, Contact
+- [x] Update app.js: Replace views with new public-facing content, remove IndexedDB and Chart.js code
+- [x] Update style.css: Add professional styling with better colors, fonts, layout
+- [x] Update manifest.json: Change name and short_name
+- [x] Update sw.js: Update cached files
+- [ ] Test the website locally
